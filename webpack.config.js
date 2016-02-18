@@ -16,7 +16,7 @@ module.exports = {
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
-    new ExtractTextPlugin("./css/[name].css")
+    new ExtractTextPlugin("css/styles.css")
   ],
   module: {
     loaders: [
@@ -27,7 +27,7 @@ module.exports = {
       },
       {
         test: /\.woff2?$|\.ttf$|\.eot$|\.svg$/,
-        loader: 'file?name=./fonts/[name].[ext]'
+        loader: 'file?name=fonts/[name].[ext]'
       },
       {
         test   : /\.css$/,
@@ -40,7 +40,7 @@ module.exports = {
       {
         test: /\.(jpe?g|png|gif)$/i,
         loaders: [
-          'file?hash=sha512&digest=hex&name=./images/[hash].[ext]',
+          'file?hash=sha512&digest=hex&name=images/[hash].[ext]',
           'image-webpack?bypassOnDebug'
         ]
       }
