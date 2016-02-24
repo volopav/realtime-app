@@ -14,6 +14,10 @@ module.exports = {
     filename: 'bundle.js',
     publicPath: '/static/'
   },
+  resolve: {
+    root: [ path.join(__dirname, 'src') ],
+    extensions: ['', '.js']
+  },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
     new ExtractTextPlugin("css/styles.css")
