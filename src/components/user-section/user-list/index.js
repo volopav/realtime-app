@@ -11,7 +11,7 @@ export default class UserList extends Component {
           return (
             <User
               user={user}
-              id={user.id}
+              key={user.id}
             />
           )
         })}
