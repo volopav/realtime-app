@@ -2,13 +2,15 @@ import './app.less';
 import React, { Component } from 'react';
 
 import ChannelSection from 'components/channel-section';
+import UserSection from 'components/users/user-section';
 
 export default class App extends Component {
   constructor (props) {
     super(props);
     this.state = {
       channels: [],
-      activeChannel: {}
+      activeChannel: {},
+      users: []
     }
   }
 
@@ -24,15 +26,30 @@ export default class App extends Component {
     //TODO: Get channel messages from server
   }
 
+  setUserName (name) {
+
+  }
+
   render() {
     return (
       <div className="app">
         <div className="nav">
-          <ChannelSection
-            {...this.state}
-            addChannel={this.addChannel.bind(this)}
-            setChannel={this.setChannel.bind(this)}
-          />
+          <div className="support">
+            <ChannelSection
+              {...this.state}
+              addChannel={this.addChannel.bind(this)}
+              setChannel={this.setChannel.bind(this)}
+            />
+          </div>
+          <div className="user-area">
+            <UserSection
+              {...this.state}
+              setUserName={this.setUserName.bind(this)}
+            />
+          </div>
+        </div>
+        <div className="messages-container">
+
         </div>
       </div>
     );

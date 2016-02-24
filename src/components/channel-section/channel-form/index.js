@@ -1,3 +1,5 @@
+import './channel-form.less';
+
 import React from 'react';
 
 export default class ChannelFrom extends React.Component {
@@ -20,12 +22,14 @@ export default class ChannelFrom extends React.Component {
 
     this.props.addChannel(channelName);
     node.value = '';
-
   }
 
   render () {
     return (
-      <form onSubmit={this.onSubmit.bind(this)}>
+      <form
+        onSubmit={this.onSubmit.bind(this)}
+        className="channel-form"
+      >
         <div className="form-group">
           <input
             className="form-control"

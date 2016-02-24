@@ -1,3 +1,5 @@
+import './channel-section.less';
+
 import React from 'react';
 
 import ChannelList from './channel-list';
@@ -6,7 +8,7 @@ import ChannelForm from './channel-form';
 export default class ChannelSection extends React.Component {
   render () {
     return (
-      <div className="support panel panel-primary">
+      <div className="channel-section panel panel-primary">
         <div className="panel-heading">
           <strong>Channels</strong>
         </div>
