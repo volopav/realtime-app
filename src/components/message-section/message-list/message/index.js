@@ -1,3 +1,5 @@
+import './message.less';
+
 import React, {Component} from 'react';
 
 export default class Message extends Component {
