@@ -1,4 +1,4 @@
-//import './user-form.less';
+import './message-form.less';
 
 import React, {Component} from 'react';
 
